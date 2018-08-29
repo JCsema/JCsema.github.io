@@ -43,10 +43,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">James Chen</a></h1>
+		  <h1 class="header-author"><a href="/">James</a></h1>
 		</hgroup>
 		
 
@@ -54,8 +54,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -66,8 +64,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
     			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
@@ -77,13 +73,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="github" target="_blank" href="https://github.com/JCsema" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -101,15 +91,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">James Chen</h1>
+			  <h1 class="header-author js-header-author">James</h1>
 			</hgroup>
 			
 			
-			
-				
 			
 				
 			
@@ -118,13 +106,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="github" target="_blank" href="https://github.com/JCsema" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -133,9 +115,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -159,7 +139,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/18/博客搭建管理流程/">博客管理流程</a>
+      <a class="article-title" href="/2018/08/18/博客搭建管理流程/">博客搭建管理流程</a>
     </h1>
   
 
@@ -172,29 +152,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-博客搭建流程"><a href="#1-博客搭建流程" class="headerlink" title="1. 博客搭建流程"></a>1. 博客搭建流程</h2><ol>
-<li>创建仓库，JCsema.github.io；</li>
-<li>创建两个分支：master 与 hexo；</li>
-<li>设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；</li>
-<li>使用git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:JCsema/JCsema.github.io.git拷贝仓库；</li>
-<li>在本地CrazyMilk.github.io文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;</li>
-<li>修改_config.yml中的deploy参数，分支应为master；</li>
-<li>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；</li>
-<li>执行hexo generate -d生成网站并部署到GitHub上。</li>
-</ol>
-<p>这样一来，在GitHub上的JCsema.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。</p>
-<h2 id="2-博客管理流程"><a href="#2-博客管理流程" class="headerlink" title="2. 博客管理流程"></a>2. 博客管理流程</h2><h3 id="2-1-日常修改"><a href="#2-1-日常修改" class="headerlink" title="2.1 日常修改"></a>2.1 日常修改</h3><p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：</p>
-<ol>
-<li>依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；</li>
-<li>然后才执行hexo generate -d发布网站到master分支上。</li>
-</ol>
-<h3 id="2-2-本地资料丢失"><a href="#2-2-本地资料丢失" class="headerlink" title="2.2 本地资料丢失"></a>2.2 本地资料丢失</h3><p>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p>
-<ol>
-<li>使用git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:JCsema/JCsema.github.io.git拷贝仓库（默认分支为hexo）；</li>
-<li>在本地新拷贝的JCsema.github.io文件夹下通过Git bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）。</li>
-</ol>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">GitHub Pages + Hexo搭建博客 | CrazyMilk’s blog</a></p>
-
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>七夕前夕，安装运行VS code的时候认识到git，因为不装git老弹warning。嘛。了解学习一番发现还能用来搭建博客，这博客不一般，不能直接网页上编辑，只能利用git特性本地修改再进行推送。有点技术范。Emmm,还免费。哈。</p>
+<p>折腾两周，中途公司家里两边都进行更新，算是实践了github保管的好处。七夕发了网站给老婆，晒晒恩爱。哈。</p>
+<p>建议开头先用自带的git bash进行操作，都搞懂后才转VS code进行编辑。</p>
+<p>参考文献很基础很详细，我这里只是摘录。</p>
+        
+          <a class="article-more-a" href="/2018/08/18/博客搭建管理流程/#more">more >></a>
+        
       
 
       
@@ -255,27 +219,27 @@
 
 
   
-    <article id="post-七夕快乐！" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-七夕快乐" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/17/七夕快乐！/">七夕快乐！</a>
+      <a class="article-title" href="/2018/08/17/七夕快乐/">七夕快乐</a>
     </h1>
   
 
         
-        <a href="/2018/08/17/七夕快乐！/" class="archive-article-date">
-  	<time datetime="2018-08-17T15:45:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
+        <a href="/2018/08/17/七夕快乐/" class="archive-article-date">
+  	<time datetime="2018-08-16T16:45:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="七夕快乐！"><a href="#七夕快乐！" class="headerlink" title="七夕快乐！"></a>七夕快乐！</h2>
+        <h1 id="七夕快乐！"><a href="#七夕快乐！" class="headerlink" title="七夕快乐！"></a>七夕快乐！</h1>
       
 
       
@@ -287,7 +251,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/17/七夕快乐！/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/17/七夕快乐/">展开全文 >></a>
         </p>
       
 
@@ -327,7 +291,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 James Chen
+    		&copy; 2018 James
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -368,8 +332,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -381,15 +343,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -465,43 +425,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">学习git&lt;br&gt;&lt;br&gt;学习python</div>
   	  	
     	</section>
     
