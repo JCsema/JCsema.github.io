@@ -4,9 +4,9 @@
 
 # Site
 title: I Love Cindy
-subtitle:
-description:
-keywords:
+subtitle: 求生欲：MAX
+description: 爱家爱老婆
+keywords: JCsema
 author: James
 language:
 timezone:
@@ -79,7 +79,7 @@ theme: yilia
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://@github.com/JCsema/JCsema.github.io.git
+  repo: git@github.com:JCsema/JCsema.github.io.git
   branch: master
 
 # 目录
